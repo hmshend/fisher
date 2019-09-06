@@ -5,6 +5,7 @@ from app.models.book import db
 
 def create_app():
     app = Flask(__name__)
+    app.app_context()
     app.config.from_object('app.secure')
     app.config.from_object('app.settings')
     register_blueprint(app)
